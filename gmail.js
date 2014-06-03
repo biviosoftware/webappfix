@@ -1,23 +1,25 @@
 (function(self){
-  var replaceSelection = function () {
-    var sel = window.getSelection();
+  function replaceSelection() {
+    var sel, range, old;
+    sel = window.getSelection();
     if (!(sel.getRangeAt && sel.rangeCount)) {
       return;
     }
-    var range = sel.getRangeAt(0);
-    var old = sel.toString();
+    range = sel.getRangeAt(0);
+    old = sel.toString();
     range.deleteContents();
     range.insertNode(
       range.createContextualFragment(
-	            '<a href="https://www.google.com/search?q='
+	'<a href="https://www.google.com/search?q='
 	    + encodeURIComponent(old)
 	    + '">' + old + "</a>"));
   };
-  var keyClick = function(evt) {
+  function keyClick(evt) {
     if (!document.hasFocus()) {
       return true;
     }
-    if (!evt.ctrlKey && !evt.shiftKey && !evt.metaKey && evt.altKey && evt.keyCode == 76) {
+    if (!evt.ctrlKey && !evt.shiftKey && !evt.metaKey && evt.altKey
+	&& evt.keyCode == 76) {
       replaceSelection();
       evt.stopPropagation();
       evt.preventDefault();
