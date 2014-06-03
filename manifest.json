@@ -1,0 +1,15 @@
+{
+  "name": "Chrome Corrector",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Add features for apps in Chrome: Currently Gmail",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["gmail.js"]
+    }
+  ]
+}
