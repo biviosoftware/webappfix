@@ -12,7 +12,7 @@
       range.createContextualFragment(
 	'<a href="https://www.google.com/search?q='
 	    + encodeURIComponent(old)
-	    + '">' + old + "</a>"));
+	    + '&btnI">' + old + "</a>"));
   };
   function keyClick(evt) {
     if (!document.hasFocus()) {
