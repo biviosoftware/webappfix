@@ -1,6 +1,6 @@
 {
   "name": "Web App Fix",
-  "version": "0.2",
+  "version": "0.3",
   "manifest_version": 2,
   "description": "Add fixes and features for apps in Chrome: Currently Gmail",
   "permissions": [
