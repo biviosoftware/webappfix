@@ -1,16 +1,14 @@
 webappfix
 ========
 
-A Chrome Extension, which adds fixes to specific web apps.  
+A Chrome Extension, which adds fixes to specific web apps.
 
 ### Install
 
-1. Clone the repository
+1. (Download webappfix.crx)[https://github.com/BivioSoftware/webappfix/raw/master/webappfix.crx]
 2. Go to Chrome Preferences > Extensions
-3. Check Developer Mode
-4. Click Load Unpacked Extension button
-5. Select `webappfix` directory
+3. Drag webappfix.crx on to the Chrome tab displaying Extensions
 
 ### mail.gmail.com
 
-<alt-l> takes the current selection and turns it into a web search link.  For example, you might be looking for a book, e.g. Thinking, Fast and Slow, it will turn it into a link https://www.google.com/search?q=Thinking,+Fast+and+Slow but the text will look like "Thinking, Fast and Slow".
+<alt-l> takes the current selection and turns it into a web link which redirects through google.  For example, you might be looking for a book, e.g. Thinking, Fast and Slow, it will turn it into a link https://www.google.com/search?q=Thinking,+Fast+and+Slow&btnI but the text will look like "Thinking, Fast and Slow".
