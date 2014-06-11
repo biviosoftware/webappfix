@@ -25,7 +25,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://mail.google.com/*", "file:///*"],
+      "matches": ["https://mail.google.com/*"],
       "js": ["gmail-content.js"]
     }
   ]
