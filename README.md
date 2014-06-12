@@ -22,5 +22,5 @@ You'll get a choice of:
   https://www.google.com/maps/search/4800+Baseline+Rd%2C+Boulder
 * Places - Google Places link, which gives you a choice of places
   https://www.google.com/search?q=Dot%27s+Diner+in+Boulder&tbm=plcs
-* Wikipedia - Wikipedia search, which will go to a specific page if it matches exactly
-  http://www.wikipedia.org/w/wiki.phtml?search=Crimean+War
+* Wikipedia - Wikipedia page
+  http://en.wikipedia.org/wiki/Crimean_War

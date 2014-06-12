@@ -21,8 +21,9 @@
       };
     case 'Wikipedia':
       return function(term) {
-	return 'http://www.wikipedia.org/w/wiki.phtml?search='
-	    + encodeURIComponent(term);
+	
+	return 'http://en.wikipedia.org/wiki/'
+	    + encodeURIComponent(term.replace(/ /g, '_'));
       };
     default:
       alert('Bug1234: ' + action);
