@@ -2,25 +2,28 @@
   // http://stenevang.wordpress.com/2013/02/22/google-search-url-request-parameters/
   function actionOp(action) {
     switch (action) {
-    case "Lucky Link":
+    case "I'm Feeling Lucky":
       return function(term) {
 	return 'https://www.google.com/search?q='
 	    + encodeURIComponent(term)
 	    + '&btnI';
       };
-    case "Map Link":
+    case 'Map':
       return function(term) {
 	return 'https://www.google.com/maps/search/'
 	    + encodeURIComponent(term)
       };
-      break;
-    case "Places Link":
+    case 'Places':
       return function(term) {
 	return 'https://www.google.com/search?q='
 	    + encodeURIComponent(term)
 	    + '&tbm=plcs'
       };
-      break;
+    case 'Wikipedia':
+      return function(term) {
+	return 'http://www.wikipedia.org/w/wiki.phtml?search='
+	    + encodeURIComponent(term);
+      };
     default:
       alert('Bug1234: ' + action);
       return;
@@ -32,10 +35,10 @@
     var old = sel.toString();
     range.deleteContents();
     var replace = op(old);
-    if (replace != "") {
+    if (replace != '') {
       range.insertNode(
 	range.createContextualFragment(
-	  '<a href="' + op(old) + '">' + old + "</a>"));
+	  '<a href="' + op(old) + '">' + old + '</a>'));
     }
   }
 

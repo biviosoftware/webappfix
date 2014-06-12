@@ -11,4 +11,16 @@ A Chrome Extension, which adds fixes to specific web apps.
 
 ### mail.gmail.com
 
-<alt-l> takes the current selection and turns it into a web link which redirects through google.  For example, you might be looking for a book, e.g. Thinking, Fast and Slow, it will turn it into a link https://www.google.com/search?q=Thinking,+Fast+and+Slow&btnI but the text will look like "Thinking, Fast and Slow".
+Select some text and click on the ![red cross](icon16.png "Red Cross") in the address bar.
+You'll get a choice of:
+
+* I'm Feeling Lucky - Google web search link, which goes to the first link.  This is the same as
+  clicking on "I'm Feeling Lucky" with the selected text.  This can be handy for finding articles,
+  books, etc. which you know the title of.
+  https://www.google.com/search?q=War+and+Peace&btnI
+* Map - Google Maps link
+  https://www.google.com/maps/search/4800+Baseline+Rd%2C+Boulder
+* Places - Google Places link, which gives you a choice of places
+  https://www.google.com/search?q=Dot%27s+Diner+in+Boulder&tbm=plcs
+* Wikipedia - Wikipedia search, which will go to a specific page if it matches exactly
+  http://www.wikipedia.org/w/wiki.phtml?search=Crimean+War

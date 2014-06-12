@@ -1,6 +1,6 @@
 (function(){
   var li;
-  ["Lucky Link", "Map Link", "Places Link"].forEach(function(action) {
+  ["I'm Feeling Lucky", 'Map', 'Places', 'Wikipedia'].forEach(function(action) {
     li = $('<li>', {
 	role: 'presentation',
     });
