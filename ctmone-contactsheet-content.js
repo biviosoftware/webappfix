@@ -18,7 +18,10 @@
     var buyerOrSeller = /Seller|Buyer/.test(who);
     var whoSuffix = buyerOrSeller ? '1' : '';
     var v = {};
-    var company = buyerOrSeller ? '' : $(this).find('b u').text().trim();
+    var company = buyerOrSeller ? '' : node.find('b u').text().trim();
+    if (/CALL TO INSPECT/i.test(company)) {
+      company = '';
+    }
     var label = 'Name';
     traverse(node.get(0), []).forEach(function (line) {
       if (line.length <= 0 ||
@@ -77,10 +80,10 @@
     });
   }
   // To test this on local files call chrome --allow-file-access-from-files (see mac.sh)
+  // for debugging
   var top = $('frame[name="re_left"]');
-  t('length ' + top.length);
   if (top.length <= 0) {
-    t('body');
+    t('Using body, not frame (for debugging)');
     top = $('body');
   }
   top.contents().find('.black2').each(function (index) {
@@ -94,6 +97,7 @@
   });
   // for debugging
   if (typeof chrome.runtime.onMessage == 'undefined') {
+//    return;
     for (var who in people) {
       t(who);
       var fields = people[who];

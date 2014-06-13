@@ -2,7 +2,7 @@
   function t(str) {console.log(str)}
   function _host(url) {
     var host = url.attr('host');
-    if (host !== 'localhost') {
+    if (host != 'localhost') {
       if (host != '') {
 	if (host == 'www.ctmone.com') {
 	  if (/ContactSheet.asp/.test(url.attr('path'))) {

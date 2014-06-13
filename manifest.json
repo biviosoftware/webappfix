@@ -30,7 +30,7 @@
     },
     {
       "matches": [
-	"https://www.ctmone.com/ctmone/UTILITIES/ContactSheet/ContactSheet.asp",
+	"https://www.ctmone.com/ctmone/UTILITIES/ContactSheet/ContactSheet.asp*",
 	"file:///*ctmone-contactsheet.html",
 	"http://localhost:*/test/ctmone-contactsheet.html"
       ],
