@@ -1,26 +1,24 @@
 (function(){
-  function t(str) {
-    console.log(str);
-  }
+  function t(str) {console.log(str)}
   function _host(url) {
     var host = url.attr('host');
-    t(host);
-    if (host != '') {
-      if (host == 'www.ctmone.com') {
-        if (/ContactSheet.asp/.test(url.attr('path'))) {
-	  return 'ctmone-contactsheet';
+    if (host !== 'localhost') {
+      if (host != '') {
+	if (host == 'www.ctmone.com') {
+	  if (/ContactSheet.asp/.test(url.attr('path'))) {
+	    return 'ctmone-contactsheet';
+	  }
 	}
+	return host;
       }
-      return host;
-    }
-    if (url.attr('protocol') != 'file') {
-      return '';
+      if (url.attr('protocol') != 'file') {
+	return '';
+      }
     }
     var found = url.attr('path').match(new RegExp('test/([^/]+).html$'));
     if (!found) {
       return '';
     }
-    t(found[1]);
     return found[1];
   }
   chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
@@ -35,7 +33,7 @@
     case 'ctmone-contactsheet':
       chrome.pageAction.setPopup({
 	tabId: tabId,
-	popup: 'ctmone-popup.html'
+	popup: 'ctmone-contactsheet-popup.html'
       });
       chrome.pageAction.show(tabId);
       break;

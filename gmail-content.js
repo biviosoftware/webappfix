@@ -39,7 +39,7 @@
     if (replace != '') {
       range.insertNode(
 	range.createContextualFragment(
-	  '<a href="' + op(old) + '">' + old + '</a>'));
+	  '<a href="' + op(old.trim()) + '">' + old + '</a>'));
     }
   }
 

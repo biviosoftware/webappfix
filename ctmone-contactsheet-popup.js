@@ -5,7 +5,6 @@
       if (!response.contacts) {
 	return;
       }
-  t('here');
       var ddm = $('.dropdown-menu');
       ddm.remove('li.waf_contact');
       for (var who in response.contacts) {

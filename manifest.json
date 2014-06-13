@@ -29,7 +29,11 @@
       "js": ["gmail-content.js"]
     },
     {
-      "matches": ["https://www.ctmone.com/ctmone/UTILITIES/ContactSheet/ContactSheet.asp", "file:///*ctmone-contactsheet.html"],
+      "matches": [
+	"https://www.ctmone.com/ctmone/UTILITIES/ContactSheet/ContactSheet.asp",
+	"file:///*ctmone-contactsheet.html",
+	"http://localhost:*/test/ctmone-contactsheet.html"
+      ],
       "js": ["jquery.min.js", "ctmone-contactsheet-content.js"]
     }
   ]

@@ -1,7 +1,6 @@
 (function(){
-  var li;
   ["I'm Feeling Lucky", 'Map', 'Places', 'Wikipedia'].forEach(function(action) {
-    li = $('<li>', {
+    var li = $('<li>', {
 	role: 'presentation',
     });
     li.append(
