@@ -4,18 +4,13 @@
     var host = url.attr('host');
     if (host != 'localhost') {
       if (host != '') {
-	if (host == 'www.ctmone.com') {
-	  if (/ContactSheet.asp/.test(url.attr('path'))) {
-	    return 'ctmone-contactsheet';
-	  }
-	}
 	return host;
       }
       if (url.attr('protocol') != 'file') {
 	return '';
       }
     }
-    var found = url.attr('path').match(new RegExp('test/([^/]+).html$'));
+    var found = url.attr('path').match(new RegExp('test/([^/]+)(-\w+)?.html$'));
     if (!found) {
       return '';
     }
@@ -30,10 +25,10 @@
       });
       chrome.pageAction.show(tabId);
       break;
-    case 'ctmone-contactsheet':
+    case 'www.ctmone.com':
       chrome.pageAction.setPopup({
 	tabId: tabId,
-	popup: 'ctmone-contactsheet-popup.html'
+	popup: 'ctmone-popup.html'
       });
       chrome.pageAction.show(tabId);
       break;
