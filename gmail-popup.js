@@ -1,5 +1,5 @@
 (function(){
-  ["I'm Feeling Lucky", 'Map', 'Places', 'Wikipedia'].forEach(function(action) {
+  ["I'm Feeling Lucky", 'Map', 'Places', 'Wikipedia', 'YouTube'].forEach(function(action) {
     var li = $('<li>', {
 	role: 'presentation',
     });

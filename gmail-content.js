@@ -21,9 +21,13 @@
       };
     case 'Wikipedia':
       return function(term) {
-	
 	return 'http://en.wikipedia.org/wiki/'
 	    + encodeURIComponent(term.replace(/ /g, '_'));
+      };
+    case 'YouTube':
+      return function(term) {
+	return 'https://www.youtube.com/results?search_query='
+	    + encodeURIComponent(term);
       };
     default:
       alert('Bug1234: ' + action);
