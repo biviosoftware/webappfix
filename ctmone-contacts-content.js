@@ -89,7 +89,7 @@
       }
 
       function parseTextNodes(line) {
-	if (parseSkip() || parseField() || parseEmailHack() || parseName())
+	if (parseSkip() || parseCompanyHack() || parseField() || parseEmailHack() || parseName())
 	  return;
 	v[label] = line;
 	t(label + ': ' + line);
@@ -100,12 +100,18 @@
 
 	function parseSkip() {
 	  if (line.length <= 0 ||
-	      /CALL TO INSPECT|click to edit/i.test(line) ||
-	      line === company) {
+	      /CALL TO INSPECT|click to edit/i.test(line)) {
 	    t('skip: ' + line);
 	    return 1;
 	  }
 	  return 0;
+	}
+
+	function parseCompanyHack() {
+	  if (line === company) {
+	    label = 'street';
+	    return 1;
+	  }
 	}
 
 	function parseField() {
@@ -253,7 +259,10 @@
     return rows;
 
     function fieldsOK(fields) {
-      return fields['name'].length && fields['email'].length;
+      return fields['name'].length
+	  && (fields['email'].length
+	      || fields['street'].length && fields['city'].length
+	      || fields['phone'].length);
     }
     function formatCSV(row) {
       return row.map(function (el) {
