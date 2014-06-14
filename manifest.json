@@ -1,8 +1,8 @@
 {
   "name": "Web App Fix",
-  "version": "0.5",
+  "version": "0.6",
   "manifest_version": 2,
-  "description": "Add fixes and features for apps in Chrome: Gmail and CTM One",
+  "description": "Add fixes and features for web apps: gmail.com, ctmone.com",
   "icons" : {
     "16": "icon16.png",
     "48": "icon48.png",
@@ -17,7 +17,8 @@
   },
   "permissions": [
     "tabs",
-    "activeTab"
+    "activeTab",
+    "downloads"
   ],
   "background": {
     "scripts": ["jquery.min.js", "purl.min.js", "background.js"],
@@ -25,16 +26,18 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://mail.google.com/*", "file:///*mail.google.com.html"],
+      "matches": [
+	"https://mail.google.com/*",
+	"http://localhost:*/test/*mail.google*.html"
+      ],
       "js": ["gmail-content.js"]
     },
     {
       "matches": [
 	"https://www.ctmone.com/*",
-	"file:///*ctmone-*.html",
-	"http://localhost:*/test/ctmone-*.html"
+	"http://localhost:*/test/*ctmone*.html"
       ],
-      "js": ["jquery.min.js", "ctmone-contactsheet-content.js"]
+      "js": ["jquery.min.js", "ctmone-contacts-content.js"]
     }
   ]
 }

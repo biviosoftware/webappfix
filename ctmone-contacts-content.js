@@ -9,12 +9,13 @@
     t('adding listener');
     chrome.runtime.onMessage.addListener(
       function(request, sender, sendResponse) {
+	t('request:');
 	t(request);
-	var response = {};
-	if (request.method == 'contacts' && parse()) {
-	  response = {contacts: formatRows()};
+	if (!(request.method == 'contacts')) {
+	  t('invalid request');
+	  return;
 	}
-	sendResponse(response);;
+	sendResponse(parse() ? {contacts: formatRows()} : {});
       });
   }
 
