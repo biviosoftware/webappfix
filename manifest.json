@@ -35,6 +35,7 @@
     {
       "matches": [
 	"https://www.ctmone.com/*",
+	"https://www.ctmecontracts.com/*",
 	"http://localhost:*/test/*ctmone*.html"
       ],
       "js": ["jquery.min.js", "ctmone-contacts-content.js"]
