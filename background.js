@@ -25,7 +25,7 @@
       });
       chrome.pageAction.show(tabId);
       break;
-    case 'www.ctmone.com':
+    case 'www.ctmecontracts.com':
       chrome.pageAction.setPopup({
 	tabId: tabId,
 	popup: 'ctmone-popup.html'

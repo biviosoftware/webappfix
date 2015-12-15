@@ -1,6 +1,6 @@
 {
   "name": "Web App Fix",
-  "version": "0.6",
+  "version": "20151215.222633",
   "manifest_version": 2,
   "description": "Add fixes and features for web apps: gmail.com, ctmone.com",
   "icons" : {
@@ -34,7 +34,6 @@
     },
     {
       "matches": [
-	"https://www.ctmone.com/*",
 	"https://www.ctmecontracts.com/*",
 	"http://localhost:*/test/*ctmone*.html"
       ],
