@@ -5,7 +5,7 @@ A Chrome Extension, which adds fixes to specific web apps.
 
 ### Install
 
-1. [Download webappfix.crx](https://github.com/BivioSoftware/webappfix/raw/master/webappfix.crx)
+1. [Download webappfix.crx](https://raw.githubusercontent.com/BivioSoftware/webappfix/master/webappfix.crx)
 2. Go to Chrome Preferences > Extensions
 3. Drag webappfix.crx on to the Chrome tab displaying Extensions
 
